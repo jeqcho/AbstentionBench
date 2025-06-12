@@ -3,18 +3,15 @@
   # AbstentionBench: A Holistic Benchmark for LLM Abstention
 
 
-[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.16084)
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.09038)
 
 </div>
 
 <div align="center" style="font-family: Arial, sans-serif;">
   
   <p>
-    <a href="##installation" style="text-decoration: none; font-weight: bold;">🔧 Installation</a> •
-    <a href="##explore-abstentionbench-results" style="text-decoration: none; font-weight: bold;">📊 Results</a>
-  </p>
-  <p>
-    <a href="##run-experiments" style="text-decoration: none; font-weight: bold;">✨ Evaluate Abstention</a> •
+    <a href="#installation" style="text-decoration: none; font-weight: bold;">🔧 Installation</a> •
+    <a href="#run-experiments" style="text-decoration: none; font-weight: bold;">✨ Evaluate Abstention</a> •
     <a href="#citation" style="text-decoration: none; font-weight: bold;">🖋️ Citation</a>
   </p>
 </div>
@@ -219,3 +216,14 @@ Third party content pulled from other locations are subject to its own licenses 
 
 # Citation
 
+```
+@misc{kirichenko2025abstentionbenchreasoningllmsfail,
+      title={AbstentionBench: Reasoning LLMs Fail on Unanswerable Questions}, 
+      author={Polina Kirichenko and Mark Ibrahim and Kamalika Chaudhuri and Samuel J. Bell},
+      year={2025},
+      eprint={2506.09038},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2506.09038}, 
+}
+```
