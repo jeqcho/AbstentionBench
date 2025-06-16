@@ -71,10 +71,9 @@ source setup.sh
 </summary>
 
 1. Create a new environment: `mamba env create -f environment.yml`
-2. Install VLLM: [install VLLM](https://docs.vllm.ai/en/latest/getting_started/installation/gpu.html)
+2. Install vLLM: [install vLLM](https://docs.vllm.ai/en/latest/getting_started/installation/gpu.html)
 3. Install PyTorch 
-4. `pip install simcse --no-deps`
-5. `pip install -e .`
+4. `pip install -e .`
 
 If using a GPU, please confirm PyTorch is installed with a compatible CUDA version.
 </details>
