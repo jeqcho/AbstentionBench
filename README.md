@@ -67,6 +67,19 @@ source setup.sh
 <br/>
 
 <details > 
+<summary>[Optional] Manual installation
+</summary>
+
+1. Create a new environment: `mamba env create -f environment.yml`
+2. Install VLLM: [install VLLM](https://docs.vllm.ai/en/latest/getting_started/installation/gpu.html)
+3. Install PyTorch 
+4. `pip install simcse --no-deps`
+5. `pip install -e .`
+
+If using a GPU, please confirm PyTorch is installed with a compatible CUDA version.
+</details>
+
+<details > 
 <summary>[Optional] If you want to use GPT4 API:
 </summary>
 From the repo root:
