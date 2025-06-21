@@ -129,10 +129,13 @@ By default, `main.py` runs the whole pipeline from inference, through abstention
 
 Model responses and evaluation results will be saved in `save_dir` specified in config.
 
+
 To run a fast subset on with at most 100 examples per dataset: 
 ```
 python main.py -m mode=cluster dataset='glob(*,exclude=dummy)' model=llama_3_1_8B_instruct sweep_folder=fast-subset dataset_indices_path=data/fast-subset-indices.json
 ```
+
+Note `mode=cluster` expects you're running the code on a cluster that supports SLURM.
 
 ### Running larger models
 - Both Llama3.1 70B and Llama3.1 405B FP8 require 8 GPUs (1 node) for inference. Llama3.1 70B can run on V100 GPUs while Llama3.1 405B FP8 requires A100 GPUs.
