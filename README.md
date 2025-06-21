@@ -120,7 +120,7 @@ source activate.sh
 
 For a simple test of the end-to-end pipeline on your local machine, run:
 ```
-python main.py -m mode=local model=dummy abstention_detector=contains_abstention_keyword
+python main.py -m mode=local model=dummy abstention_detector=contains_abstention_keyword run_single_job_for_inference_and_judge=True
 ```
 
 Where the `dataset` arg corresponds to config file names in `configs/dataset/`, and `model` to `config/model/`. See below for supported models and datasets.
