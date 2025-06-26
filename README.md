@@ -46,10 +46,15 @@ df
 
 ## Installation
 
-### First-time setup
+### Pre-requisites
+
+* Before you start, make sure you have [mamba](https://mamba.readthedocs.io/en/latest/).
+* If using a GPU, make sure that you are using CUDA version 12.1.
+
+<br/>
 
 <details > 
-<summary>[Pre-requisite] Before you start, make sure you have mamba installed.
+<summary>To install mamba:
 </summary>
   
 ```
@@ -58,7 +63,8 @@ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mi
 See [here](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html#fresh-install-recommended) for more instructions.
 </details>
 
-<br/>
+### First-time setup
+
 
 To setup your environment, 1) clone the repo then 2) run the setup script:
 ```
@@ -70,23 +76,46 @@ source setup.sh
 <summary>[Optional] Manual installation
 </summary>
 
-1. Create a new environment: `mamba env create -f environment.yml`
-2. Install vLLM: [install vLLM](https://docs.vllm.ai/en/latest/getting_started/installation/gpu.html)
-3. Install PyTorch 
-4. `pip install -e .`
+1. Ensure you are using CUDA 12.1. 
 
-If using a GPU, please confirm PyTorch is installed with a compatible CUDA version.
+2. Create a new mamba environment and activate it:
+
+```
+mamba env create -f environment.yml
+mamba activate abstention-bench
+```
+
+3. [Install vLLM](https://docs.vllm.ai/en/latest/getting_started/installation/gpu.html) version 0.6.4.post1 with pip:
+
+```
+pip install vllm==0.6.4.post1
+```
+
+4. Force-install [PyTorch](https://pytorch.org/get-started/previous-versions/) version 2.5.1 with CUDA 12.1 support:
+
+```
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 -U --index-url https://download.pytorch.org/whl/cu121
+```
+
+5. Install AbstentionBench:
+
+```
+pip install -e .
+```
 </details>
 
 <details > 
-<summary>[Optional] If you want to use GPT4 API:
+<summary>[Optional] API models (e.g., GPT-4o, Gemini):
 </summary>
-From the repo root:
-
+Create a directory called `.secrets` in the repo root, and drop a file containing your API key for each model, like so:
 ```
 mkdir .secrets
-echo YOUR-API-KEY-HERE > .secrets/azure_api_key
+echo YOUR-AZURE-GPT-4o-API-KEY-HERE > .secrets/azure_gpt4o_api_key
+echo YOUR-AZURE-o1-API-KEY-HERE > .secrets/azure_o1_api_key
+echo YOUR-GOOGLE-API-KEY-HERE > .secrets/google_genai_api_key
 ```
+
+Then, whenever you run `source activate.sh`, your keys will be available.
 </details>
 
 
