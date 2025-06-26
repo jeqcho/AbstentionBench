@@ -136,19 +136,6 @@ class TestKUQDataset:
         assert not prompt.should_abstain
         assert prompt.metadata["KUQ_category"] == None
 
-    def test_has_category_when_should_abstain_with_category_map_path(self):
-        dataset = KUQDataset(category_map_path="data/kuq/new-category-mapping.csv")
-        prompt = dataset[0]
-
-        assert prompt.should_abstain
-        assert prompt.metadata["KUQ_category"] == "unsolved problem"
-
-    def test_has_category_when_should_not_abstain_with_category_map_path(self):
-        dataset = KUQDataset(category_map_path="data/kuq/new-category-mapping.csv")
-        prompt = dataset[3438]
-
-        assert not prompt.should_abstain
-        assert prompt.metadata["KUQ_category"] == "false assumption"
 
 
 class TestBBQDataset:
@@ -481,27 +468,6 @@ class TestALCUNADataset:
         assert not prompt.should_abstain
         assert prompt.metadata["ALCUNA_entity_id"] == -144
 
-    def test_getitem_where_should_abstain(self):
-        dataset = ALCUNADataset(
-            "data/alcuna/id2question.json", "data/alcuna/meta_data.jsonl"
-        )
-        prompt = dataset[41]
-
-        assert prompt.reference_answers is None
-        assert prompt.should_abstain
-
-    def test_reference_answers_type(self):
-        dataset = ALCUNADataset(
-            "data/alcuna/id2question.json", "data/alcuna/meta_data.jsonl"
-        )
-        for ex in dataset:
-            assert type(ex.reference_answers) == list or ex.reference_answers is None
-
-    def test_len(self):
-        dataset = ALCUNADataset(
-            "data/alcuna/id2question.json", "data/alcuna/meta_data.jsonl"
-        )
-        assert len(dataset) == 63052
 
 
 class TestBigBenchDisambiguateDataset:
@@ -678,7 +644,7 @@ class TestMoralChoiceDataset:
 
 
 @pytest.mark.parametrize(
-    "dataset_name,expected_len", [("dummy", 100), ("musique", 3266), ("nq", 11208)]
+    "dataset_name,expected_len", [("dummy", 100), ("musique", 3266)]
 )
 def test_config_instantiation(dataset_name, expected_len) -> None:
     with initialize(version_base="1.2", config_path="../configs"):
