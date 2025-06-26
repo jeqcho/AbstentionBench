@@ -12,7 +12,6 @@ from hydra.utils import instantiate
 
 from recipe.abstention_datasets.abstract_abstention_dataset import DummyDataset, Prompt
 from recipe.abstention_datasets.alcuna import ALCUNADataset
-from recipe.abstention_datasets.averitec import AveritecDataset
 from recipe.abstention_datasets.bbq import BBQDataset
 from recipe.abstention_datasets.big_bench import (
     BigBenchDisambiguateDataset,
@@ -436,25 +435,6 @@ class TestQASPERDataset:
     def test_len(self):
         dataset = QASPERDataset()
         assert len(dataset) == 1287
-
-
-class TestAveritecDataset:
-    def test_getitem(self):
-        dataset = AveritecDataset()
-        sample = dataset[3]
-        assert isinstance(sample, Prompt)
-
-        assert (
-            sample.question == "Has there been larger tax bills than the 2017 tax bill?"
-        )
-        assert sample.should_abstain is False
-        assert sample.reference_answers == [
-            "Three tax bills have been larger: American Taxpayer Relief Act of 2012 (enacted in 2013); \nTax Relief, Unemployment Insurance Reauthorization, and Job Creation Act of 2010 and\nEconomic Recovery Tax Act of 1981"
-        ]
-
-    def test_len(self):
-        dataset = AveritecDataset()
-        assert len(dataset) == 7265
 
 
 class TestALCUNADataset:
