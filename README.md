@@ -107,7 +107,9 @@ pip install -e .
 <details > 
 <summary>[Optional] API models (e.g., GPT-4o, Gemini):
 </summary>
+
 Create a directory called `.secrets` in the repo root, and drop a file containing your API key for each model, like so:
+
 ```
 mkdir .secrets
 echo YOUR-AZURE-GPT-4o-API-KEY-HERE > .secrets/azure_gpt4o_api_key
