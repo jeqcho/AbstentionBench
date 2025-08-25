@@ -190,23 +190,25 @@ Note `mode=cluster` expects you're running the code on a cluster that supports S
 
 ### Available datasets
 * ALCUNA [subsampled]: `alcuna`
-* Averitec [subsampled]: `averitec`
 * Bias Benchmark for QA (BBQ) [subsampled]: `bbq`
 * BIG-Bench Disambiguate: `big_bench_disambiguate`
 * BIG-Bench Known Unknowns: `big_bench_known_unknowns`
 * CoCoNot: `coconot`
 * FalseQA: `falseqa`
 * FreshQA: `freshqa`
-* Known Unknown Questions (KUQ) [subsampled]:`kuq`
+* GPQA: `gpqa`
+* GSM8K: `gsm8k`
+* Known Unknown Questions (KUQ) [subsampled]: `kuq`
 * MediQ: `mediq`
-* MoralChoice: `moralchoice`
-* Musique: `MusiqueDataset`
-* NaturalQuestions [subsampled]: `NQ`
+* MMLU History: `mmlu_history`
+* MMLU Math: `mmlu_math`
+* Musique: `musique`
 * Question Answering with Questionable Assumptions (QAQA): `qaqa`
 * QASPER: `qasper`
 * SelfAware: `self_aware`
-* SituatedQA: `situatedqa`
+* SituatedQA: `situated_qa`
 * SQuAD 2.0 [subsampled]: `squad2`
+* UMWP: `umwp`
 * WorldSense: `worldsense`
 
 Note that all datasets with over a threshold 3.5k samples were truncated using uniform subsampling.
