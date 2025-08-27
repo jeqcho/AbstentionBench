@@ -200,12 +200,11 @@ Note `mode=cluster` expects you're running the code on a cluster that supports S
 * GSM8K: `gsm8k`
 * Known Unknown Questions (KUQ) [subsampled]: `kuq`
 * MediQ: `mediq`
-* MMLU History: `mmlu_history`
+* MoralChoice: `moralchoice`
 * MMLU Math: `mmlu_math`
 * Musique: `musique`
 * Question Answering with Questionable Assumptions (QAQA): `qaqa`
 * QASPER: `qasper`
-* SelfAware: `self_aware`
 * SituatedQA: `situated_qa`
 * SQuAD 2.0 [subsampled]: `squad2`
 * UMWP: `umwp`
