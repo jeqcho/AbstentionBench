@@ -43,6 +43,21 @@ df
 
 ![alt text](sample_results.png)
 
+## AbstentionBench data on HuggingFace
+
+AbstentionBench data is now available on 🤗 HuggingFace!
+
+```python
+# pip install -U datasets==3.6.0 gdown pandas torch pydantic jsonlines requests wget numpy
+
+import datasets
+
+abstention_bench_data = datasets.load_dataset('facebook/AbstentionBench', trust_remote_code=True)
+```
+
+See [HuggingFace](https://huggingface.co/datasets/facebook/AbstentionBench) for details.
+
+For the full AbstentionBench pipeline, including the judge see installation below.
 
 ## Installation
 
