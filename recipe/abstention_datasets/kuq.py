@@ -92,3 +92,8 @@ class KUQDataset(AbstentionDataset):
             should_abstain=should_abstain,
             metadata=metadata,
         )
+
+
+if __name__ == "__main__":
+    kuq_dataset = KUQDataset()
+    print(kuq_dataset[3])
