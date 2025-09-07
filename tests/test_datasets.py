@@ -10,35 +10,35 @@ import pytest
 from hydra import compose, initialize
 from hydra.utils import instantiate
 
-from recipe.abstention_datasets.abstract_abstention_dataset import DummyDataset, Prompt
-from recipe.abstention_datasets.alcuna import ALCUNADataset
-from recipe.abstention_datasets.bbq import BBQDataset
-from recipe.abstention_datasets.big_bench import (
+from abstentionbench.recipe.abstention_datasets.abstract_abstention_dataset import DummyDataset, Prompt
+from abstentionbench.recipe.abstention_datasets.alcuna import ALCUNADataset
+from abstentionbench.recipe.abstention_datasets.bbq import BBQDataset
+from abstentionbench.recipe.abstention_datasets.big_bench import (
     BigBenchDisambiguateDataset,
     BigBenchKnownUnknownsDataset,
 )
-from recipe.abstention_datasets.coconot import CoCoNotDataset
-from recipe.abstention_datasets.false_qa import FalseQADataset
-from recipe.abstention_datasets.freshqa import FreshQADataset
-from recipe.abstention_datasets.gpqa import GPQA
-from recipe.abstention_datasets.gsm8k import GSM8K
-from recipe.abstention_datasets.kuq import KUQDataset
-from recipe.abstention_datasets.mediq import MediQDataset
-from recipe.abstention_datasets.mmlu import (
+from abstentionbench.recipe.abstention_datasets.coconot import CoCoNotDataset
+from abstentionbench.recipe.abstention_datasets.false_qa import FalseQADataset
+from abstentionbench.recipe.abstention_datasets.freshqa import FreshQADataset
+from abstentionbench.recipe.abstention_datasets.gpqa import GPQA
+from abstentionbench.recipe.abstention_datasets.gsm8k import GSM8K
+from abstentionbench.recipe.abstention_datasets.kuq import KUQDataset
+from abstentionbench.recipe.abstention_datasets.mediq import MediQDataset
+from abstentionbench.recipe.abstention_datasets.mmlu import (
     MMLUHistory,
     MMLUHistoryGenerator,
     MMLUMath,
     MMLUMathGenerator,
 )
-from recipe.abstention_datasets.moralchoice import MoralChoiceDataset
-from recipe.abstention_datasets.musique import MusiqueDataset
-from recipe.abstention_datasets.nq_dataset import NQDataset
-from recipe.abstention_datasets.qaqa import QAQADataset
-from recipe.abstention_datasets.qasper import QASPERDataset
-from recipe.abstention_datasets.self_aware import SelfAwareDataset
-from recipe.abstention_datasets.situated_qa import SituatedQAGeoDataset
-from recipe.abstention_datasets.squad import Squad2Dataset
-from recipe.abstention_datasets.world_sense import WorldSenseDataset
+from abstentionbench.recipe.abstention_datasets.moralchoice import MoralChoiceDataset
+from abstentionbench.recipe.abstention_datasets.musique import MusiqueDataset
+from abstentionbench.recipe.abstention_datasets.nq_dataset import NQDataset
+from abstentionbench.recipe.abstention_datasets.qaqa import QAQADataset
+from abstentionbench.recipe.abstention_datasets.qasper import QASPERDataset
+from abstentionbench.recipe.abstention_datasets.self_aware import SelfAwareDataset
+from abstentionbench.recipe.abstention_datasets.situated_qa import SituatedQAGeoDataset
+from abstentionbench.recipe.abstention_datasets.squad import Squad2Dataset
+from abstentionbench.recipe.abstention_datasets.world_sense import WorldSenseDataset
 
 
 class TestDummyDataset:

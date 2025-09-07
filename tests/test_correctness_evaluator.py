@@ -6,10 +6,10 @@ LICENSE file in the root directory of this source tree.
 """
 import pytest
 
-from recipe.abstention import Response
-from recipe.abstention_datasets.abstract_abstention_dataset import Prompt
-from recipe.evaluation import LLMJudgeCorrectnessEvaluator
-from recipe.models import Llama3_1_8B_Instruct
+from abstentionbench.recipe.abstention import Response
+from abstentionbench.recipe.abstention_datasets.abstract_abstention_dataset import Prompt
+from abstentionbench.recipe.evaluation import LLMJudgeCorrectnessEvaluator
+from abstentionbench.recipe.models import Llama3_1_8B_Instruct
 
 
 class TestLLMJudgeCorrectnessEvaluator:

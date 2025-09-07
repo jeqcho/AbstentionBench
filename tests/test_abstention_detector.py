@@ -4,10 +4,10 @@ All rights reserved.
 This source code is licensed under the license found in the
 LICENSE file in the root directory of this source tree.
 """
-from recipe.evaluation import ContainsAbstentionKeywordAbstentionDetector, LLMJudgeAbstentionDetector
-from recipe.abstention import Response
-from recipe.abstention_datasets.abstract_abstention_dataset import Prompt
-from recipe.models import Llama3_1_8B_Instruct
+from abstentionbench.recipe.evaluation import ContainsAbstentionKeywordAbstentionDetector, LLMJudgeAbstentionDetector
+from abstentionbench.recipe.abstention import Response
+from abstentionbench.recipe.abstention_datasets.abstract_abstention_dataset import Prompt
+from abstentionbench.recipe.models import Llama3_1_8B_Instruct
 import pytest
 
 

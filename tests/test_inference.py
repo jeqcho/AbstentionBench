@@ -4,9 +4,9 @@ All rights reserved.
 This source code is licensed under the license found in the
 LICENSE file in the root directory of this source tree.
 """
-from recipe.abstention_datasets.abstract_abstention_dataset import DummyDataset, Prompt
-from recipe.inference import InferencePipeline, RawResponse, RawResponses
-from recipe.models import DummyModel
+from abstentionbench.recipe.abstention_datasets.abstract_abstention_dataset import DummyDataset, Prompt
+from abstentionbench.recipe.inference import InferencePipeline, RawResponse, RawResponses
+from abstentionbench.recipe.models import DummyModel
 
 
 class TestResponses:

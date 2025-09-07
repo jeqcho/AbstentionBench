@@ -24,9 +24,9 @@ from hydra.utils import instantiate, to_absolute_path
 from omegaconf import DictConfig, OmegaConf
 from submitit.helpers import clean_env
 
-from recipe.abstention import Responses
-from recipe.inference import InferencePipeline, RawResponses
-from recipe.models import InferenceModel
+from abstentionbench.recipe.abstention import Responses
+from abstentionbench.recipe.inference import InferencePipeline, RawResponses
+from abstentionbench.recipe.models import InferenceModel
 
 logger = logging.getLogger(__name__)
 
@@ -400,7 +400,7 @@ class AbstentionWorkflow:
 
 @hydra.main(
     version_base="1.2",
-    config_path="configs",
+    config_path="pkg://abstentionbench.configs",
     config_name="default_pipeline.yaml",
 )
 def main(config: DictConfig) -> None:

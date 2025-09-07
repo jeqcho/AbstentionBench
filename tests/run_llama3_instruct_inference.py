@@ -6,7 +6,7 @@ LICENSE file in the root directory of this source tree.
 """
 import torch
 
-from recipe.models import Llama3_1_8B_Instruct
+from abstentionbench.recipe.models import Llama3_1_8B_Instruct
 
 torch.cuda.empty_cache()
 

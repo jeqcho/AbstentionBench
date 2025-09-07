@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abstentionbench"
+version = "1.0.0"
+description = "A Holistic Benchmark for LLM Abstention"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "CC-BY-NC"}
+authors = [
+    {name = "Meta Platforms, Inc."}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "accelerate",
+    "altair",
+    "datasets",
+    "fire",
+    "GitPython",
+    "gdown",
+    "google-generativeai",
+    "hydra-core",
+    "hydra-submitit-launcher",
+    "huggingface-hub",
+    "ipykernel",
+    "ipywidgets",
+    "jsonlines",
+    "kaleido",
+    "loguru",
+    "openai",
+    "plotly",
+    "pydantic",
+    "PyPDF2",
+    "pytest",
+    "requests",
+    "scikit-learn",
+    "submitit",
+    "tabulate",
+    "torch",
+    "tqdm",
+    "transformers",
+    "wget",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+gpu = [
+    "vllm>=0.6.4.post1",
+]
+
+[project.scripts]
+abstention-bench = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/facebookresearch/AbstentionBench"
+Repository = "https://github.com/facebookresearch/AbstentionBench"
+"Bug Reports" = "https://github.com/facebookresearch/AbstentionBench/issues"
+
+[tool.setuptools.packages.find]
+include = ["abstentionbench*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.yml", "*.json", "*.csv"]

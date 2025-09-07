@@ -6,7 +6,7 @@ LICENSE file in the root directory of this source tree.
 """
 import pytest
 
-from recipe.models import (
+from abstentionbench.recipe.models import (
     DummyModel,
     Gemini15ProAPI,
     GPT4oAPI,
