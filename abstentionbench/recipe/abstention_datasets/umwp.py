@@ -71,7 +71,7 @@ class UMWP(AbstentionDataset):
         # We cap AbstentionBench datasets to random 3500 questions.
         # This indices files indicates subset of random 3500/2 questions
         # (out of 5200/2 of UMWP).
-        indices_path = "data/UMWP_indices_answerable.json"
+        indices_path = os.path.join(get_data_dir(), "UMWP_indices_answerable.json")
         with open(to_absolute_path(indices_path), "r") as f:
             indices_list = json.load(f)
         answerable_ind = np.array(indices_list)
