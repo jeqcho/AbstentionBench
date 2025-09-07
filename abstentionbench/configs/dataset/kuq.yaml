@@ -5,4 +5,4 @@ dataset_name: KUQDataset
 datamodule:
   _target_: abstentionbench.recipe.abstention_datasets.kuq.KUQDataset
   max_num_samples: null
-  category_map_path: data/kuq/new-category-mapping.csv
+  category_map_path: ${data_dir}/kuq/new-category-mapping.csv
