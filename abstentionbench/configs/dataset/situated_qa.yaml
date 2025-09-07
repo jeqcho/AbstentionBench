@@ -3,5 +3,5 @@
 dataset_name: SituatedQAGeoDataset
 
 datamodule:
-  _target_: recipe.abstention_datasets.situated_qa.${dataset_name}
+  _target_: abstentionbench.recipe.abstention_datasets.situated_qa.${dataset_name}
   max_num_samples: null

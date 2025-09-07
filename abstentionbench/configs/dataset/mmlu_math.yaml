@@ -3,6 +3,6 @@
 dataset_name: MMLUMath
 
 datamodule:
-  _target_: recipe.abstention_datasets.mmlu.MMLUMath
+  _target_: abstentionbench.recipe.abstention_datasets.mmlu.MMLUMath
   split: "test"
   max_num_samples: null

@@ -3,6 +3,6 @@
 dataset_name: GPQA
 
 datamodule:
-  _target_: recipe.abstention_datasets.gpqa.GPQA
+  _target_: abstentionbench.recipe.abstention_datasets.gpqa.GPQA
   subset: "gpqa_diamond"
   max_num_samples: null

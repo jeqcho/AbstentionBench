@@ -7,6 +7,6 @@ dataset_name: QASPERDataset
 # empty responses. 
 
 datamodule:
-  _target_: recipe.abstention_datasets.qasper.${dataset_name}
+  _target_: abstentionbench.recipe.abstention_datasets.qasper.${dataset_name}
   data_dir: ${data_dir}/qasper
   max_num_samples: null
