@@ -50,12 +50,12 @@ class ALCUNADataset(AbstentionDataset):
         
         try:
             # Load the formatted dataset from disk
-            self.dataset = datasets.Dataset.load_from_disk(data_dir)
+            self.dataset = datasets.Dataset.load_from_disk(self.data_dir)
         except:
             logger.info("Preparing dataset")
 
-            questions_path = os.path.join(data_dir, "id2question.json")
-            metadata_path = os.path.join(data_dir, "meta_data.jsonl")
+            questions_path = os.path.join(self.data_dir, "id2question.json")
+            metadata_path = os.path.join(self.data_dir, "meta_data.jsonl")
 
             self._download_data()
 
@@ -67,7 +67,7 @@ class ALCUNADataset(AbstentionDataset):
 
             self.dataset = self._prepare_dataset(questions_data, metadata)
 
-            self.dataset.save_to_disk(data_dir)
+            self.dataset.save_to_disk(self.data_dir)
 
     def _download_data(self):
         file_id_and_file_names = [

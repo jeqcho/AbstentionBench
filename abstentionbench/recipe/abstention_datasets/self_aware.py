@@ -33,7 +33,7 @@ class SelfAwareDataset(AbstentionDataset):
             data = response.json()
 
             self.dataset = datasets.Dataset.from_list(data["example"])
-            self.dataset.save_to_disk(data_dir)
+            self.dataset.save_to_disk(self.data_dir)
 
     def __len__(self):
         return self.max_num_samples or len(self.dataset)

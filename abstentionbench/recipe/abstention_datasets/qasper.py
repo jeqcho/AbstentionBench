@@ -42,7 +42,7 @@ class QASPERDataset(AbstentionDataset):
 
             self.dataset = self._prepare_dataset(dataset)
 
-            self.dataset.save_to_disk(data_dir)
+            self.dataset.save_to_disk(self.data_dir)
 
         # Only keep questions where annotators agree on answerable/unanswerable
         self.dataset = self.dataset.filter(lambda x: x["is_unanswerable"] is not None)

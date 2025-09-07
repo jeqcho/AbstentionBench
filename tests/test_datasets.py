@@ -647,7 +647,7 @@ class TestMoralChoiceDataset:
     "dataset_name,expected_len", [("dummy", 100), ("musique", 3266)]
 )
 def test_config_instantiation(dataset_name, expected_len) -> None:
-    with initialize(version_base="1.2", config_path="../configs"):
+    with initialize(version_base="1.2", config_path="../abstentionbench/configs"):
         # config is relative to a module
         cfg = compose(
             config_name="default_pipeline.yaml", overrides=[f"dataset={dataset_name}"]

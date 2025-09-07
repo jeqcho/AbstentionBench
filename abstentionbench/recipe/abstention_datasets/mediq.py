@@ -47,7 +47,7 @@ class _MediQSubDataset(
 
             self.dataset = datasets.Dataset.from_list(list(data))
 
-            self.dataset.save_to_disk(data_dir)
+            self.dataset.save_to_disk(self.data_dir)
 
         if exclude_sample_ids is not None:
             self.dataset = self.dataset.filter(

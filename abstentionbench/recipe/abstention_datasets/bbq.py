@@ -63,7 +63,7 @@ class BBQDataset(AbstentionDataset):
 
             self.dataset = datasets.concatenate_datasets(all_subdatasets)
 
-            self.dataset.save_to_disk(data_dir)
+            self.dataset.save_to_disk(self.data_dir)
 
     def __len__(self):
         return self.max_num_samples or len(self.dataset)

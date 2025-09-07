@@ -37,7 +37,7 @@ You can explore existing abstention results without special installations. Simpl
 ```python
 import pandas as pd
 
-df = pd.read_csv("analysis/abstention_performance.csv")
+df = pd.read_csv("abstentionbench/analysis/abstention_performance.csv")
 df
 ```
 
@@ -151,7 +151,7 @@ To set up to run with FreshQA:
 1. Review the list of available FreshQA Google Sheets on the project's [README](https://github.com/freshllms/freshqa?tab=readme-ov-file)
 2. Pick a 'baseline' date, which should be before the model's pretraining cut-off, and an 'updated' date, which should be after the cut-off
 3. For both baseline and updated, open the Google Sheet and export their contents as CSV (File > Download > Comma Separated Values)
-4. Move these two CSVs into `data/freshqa/`, and update the paths in `configs/dataset/freshqa.yaml` accordingly
+4. Move these two CSVs into `abstentionbench/data/freshqa/`, and update the paths in `abstentionbench/configs/dataset/freshqa.yaml` accordingly
 
 Note: To exactly replicate our work, use [FreshQA_v10282024](https://docs.google.com/spreadsheets/d/1j6qr14l8oK_7gJ_XdnTBi8Pj1NVt5yeQEBKxFPkKn_g/edit?gid=334049794#gid=334049794) and [FreshQA_v12182024](https://docs.google.com/spreadsheets/d/1llFQDYuwX95L7yYDQ4aLCwJmkEh9VOSHNu6g7HjT8e0/edit?gid=334049794#gid=334049794) as baseline and updated respectively.
 
@@ -169,7 +169,7 @@ For a simple test of the end-to-end pipeline on your local machine, run:
 python main.py -m mode=local model=dummy abstention_detector=contains_abstention_keyword run_single_job_for_inference_and_judge=True
 ```
 
-Where the `dataset` arg corresponds to config file names in `configs/dataset/`, and `model` to `config/model/`. See below for supported models and datasets.
+Where the `dataset` arg corresponds to config file names in `abstentionbench/configs/dataset/`, and `model` to `abstentionbench/configs/model/`. See below for supported models and datasets.
 
 By default, `main.py` runs the whole pipeline from inference, through abstention detection, to evaluation. The pipeline launches seaparate jobs for inference and the rest of the evaluations to support a separate LLM judge. To launch everything in a single job for debugging use the `run_single_job_for_inference_and_judge=True` flag.
 
@@ -178,7 +178,7 @@ Model responses and evaluation results will be saved in `save_dir` specified in 
 
 To run a fast subset on with at most 100 examples per dataset: 
 ```
-python main.py -m mode=cluster dataset='glob(*,exclude=dummy)' model=llama_3_1_8B_instruct sweep_folder=fast-subset dataset_indices_path=data/fast-subset-indices.json
+python main.py -m mode=cluster dataset='glob(*,exclude=dummy)' model=llama_3_1_8B_instruct sweep_folder=fast-subset dataset_indices_path=abstentionbench/data/fast-subset-indices.json
 ```
 
 Note `mode=cluster` expects you're running the code on a cluster that supports SLURM.
@@ -227,7 +227,7 @@ Note `mode=cluster` expects you're running the code on a cluster that supports S
 
 Note that all datasets with over a threshold 3.5k samples were truncated using uniform subsampling.
 These datasets are marked with "[subsampled]" in the list above. 
-Sample indices can be found in `data/subsampling-indices.json`. 
+Sample indices can be found in `abstentionbench/data/subsampling-indices.json`. 
 You can disable this by setting the `dataset_indices_path` config attribute to `null`. 
 
 

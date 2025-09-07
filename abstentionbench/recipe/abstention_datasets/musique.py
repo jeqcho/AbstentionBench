@@ -18,7 +18,7 @@ class MusiqueDataset(NQDataset):
 
     def __init__(
         self,
-        data_dir='data/musique',
+        data_dir='abstentionbench/data/musique',
         file_name="musique/test.json",
         max_num_samples=None,
     ):

@@ -43,8 +43,8 @@ only_run_inference: False
 # name to list of indices.
 dataset_indices_subset: null
 # fast subset
-# dataset_indices_path: data/fast-subset-indices.json
-dataset_indices_path: data/subsampling-indices.json
+# dataset_indices_path: abstentionbench/data/fast-subset-indices.json
+dataset_indices_path: abstentionbench/data/subsampling-indices.json
 
 seed: 123456789
 

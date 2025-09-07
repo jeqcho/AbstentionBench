@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 class Results:
     """Loads results.
     By default uses the paths specified in
-        analysis/results_path.py
+        abstentionbench/analysis/results_path.py
 
     Attributes:
         df: pandas dataframe that turns saved results into a table

@@ -5,7 +5,7 @@ This source code is licensed under the license found in the
 LICENSE file in the root directory of this source tree.
 """
 """
-python recipe/job_manager.py show_relaunch_commands_for_missing_jobs --sweep_dir=sweep-reasoning-2025-03-25
+python abstentionbench/recipe/job_manager.py show_relaunch_commands_for_missing_jobs --sweep_dir=sweep-reasoning-2025-03-25
 """
 
 import glob
